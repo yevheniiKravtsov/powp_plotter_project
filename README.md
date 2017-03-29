@@ -1,4 +1,4 @@
-#Laboratoria - zastosowanie wzorców projektowych w bibliotece narzędziowej PlotterMagic
+# Laboratoria - zastosowanie wzorców projektowych w bibliotece narzędziowej PlotterMagic
 
 ## instrukcje
 
