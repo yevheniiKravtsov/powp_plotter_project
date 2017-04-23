@@ -1,8 +1,6 @@
 package edu.iis.powp.adapter;
 
 import edu.iis.client.plottermagic.IPlotter;
-import edu.iis.powp.app.Application;
-import edu.iis.powp.appext.ApplicationWithDrawer;
 import edu.kis.powp.drawer.panel.DrawPanelController;
 import edu.kis.powp.drawer.shape.ILine;
 import edu.kis.powp.drawer.shape.LineFactory;
@@ -45,4 +43,7 @@ public class PlotterAdapter implements IPlotter
     {
         return "@Q!$!@$!#@$(*#@&Q(%^*#@";
     }
+    
+    //Z adaptera klasy trzeba korzystać zeby obiekty z jednym interfejsem mógł pracować
+    //tam gdzie jest potrzebny inny interfejs. Czyli umozliwia spówpracę obiektów o niezgodnych interfejsach.
 }
