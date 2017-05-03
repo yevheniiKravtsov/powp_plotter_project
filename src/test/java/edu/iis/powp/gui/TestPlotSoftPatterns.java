@@ -16,8 +16,11 @@ import edu.iis.powp.app.DriverManager;
 import edu.iis.powp.appext.ApplicationWithDrawer;
 import edu.iis.powp.events.predefine.SelectChangeVisibleOptionListener;
 import edu.iis.powp.events.predefine.SelectTestFigureOptionListener;
+import edu.iis.powp.factory.FigureFactory;
+import edu.iis.powp.factory.SelectTestFigureOptionComplexCommand;
 import edu.kis.powp.drawer.panel.DefaultDrawerFrame;
 import edu.kis.powp.drawer.panel.DrawPanelController;
+import javafx.scene.shape.Line;
 
 
 public class TestPlotSoftPatterns
@@ -35,6 +38,12 @@ public class TestPlotSoftPatterns
 		context.addTest("Figure Joe 2", (ActionEvent e) -> {
 			FiguresJoe.figureScript2(Application.getComponent(DriverManager.class).getCurrentPlotter());
 		});
+		FigureFactory figureFactory = new FigureFactory();
+		 		SelectTestFigureOptionComplexCommand selectTestFigureOptionComplexCommandListener1 = new SelectTestFigureOptionComplexCommand(figureFactory.getSquare());
+		 		SelectTestFigureOptionComplexCommand selectTestFigureOptionComplexCommandListener2 = new SelectTestFigureOptionComplexCommand(figureFactory.getTriangle());
+		  		
+		 		context.addTest("Figure Square", selectTestFigureOptionComplexCommandListener1);
+		 		context.addTest("Figure Triangle", selectTestFigureOptionComplexCommandListener2);
 	}
 
 	/**
@@ -86,6 +95,8 @@ public class TestPlotSoftPatterns
     /**
      * Launch the application.
      */
+	
+	
     public static void main(String[] args)
     {
         EventQueue.invokeLater(new Runnable()

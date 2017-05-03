@@ -14,6 +14,8 @@ public class PlotterAdapter implements IPlotter
 	private int startX = 0, startY = 0;
 	private final DrawPanelController drawPanelController;
 	
+	
+	
     public PlotterAdapter(DrawPanelController drawPanelController) {
 		super();
 		this.drawPanelController = drawPanelController;
@@ -37,6 +39,7 @@ public class PlotterAdapter implements IPlotter
         drawPanelController.drawLine(line);
 		setPosition(x,y);
     }
+    
 
     @Override
     public String toString()
